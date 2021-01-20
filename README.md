@@ -1,5 +1,7 @@
 # topaztrainmetrics
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4451826.svg)](https://doi.org/10.5281/zenodo.4451826)
+
 Plot metrics from a [Topaz](https://github.com/tbepler/topaz) training run.
 
 ## Installation
