@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import click
-import sys
 
 @click.command(context_settings=dict(help_option_names=['-h', '--help']))
 @click.argument('file', metavar='<file>')
@@ -32,9 +31,6 @@ def cli(file, series, xaxis, output_file):
             ax.set_title(f'{key}')
             ax.set_xlabel(xaxis)
         axs[0].set_ylabel('True or false positive rate')
-    else:
-        sys.stderr.write("Error: the metric you are trying to plot was not found in the data file.")
-        sys.exit(1)
     fig.tight_layout()
     if output_file:
         fig.figsize = (11.80, 8.85)
