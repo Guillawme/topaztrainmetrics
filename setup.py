@@ -8,7 +8,7 @@ with open(path.join(here, 'README.md'), encoding = 'utf-8') as f:
 
 setup(
     name = 'topaztrainmetrics',
-    version = '1.0',
+    version = '1.1',
 
     description = 'Plot metrics from a Topaz training run',
     long_description = readme,
