@@ -8,8 +8,8 @@ import click
 @click.option('-g', '--gepenalty', 'series', flag_value='ge_penalty', help='Plot GE penalty.')
 @click.option('-p', '--precision', 'series', flag_value='precision', help='Plot precision.')
 @click.option('-t', '--tpr', 'series', flag_value=['tpr', 'fpr'], help='Plot true/false positive rates.')
-@click.option('-c', '--auprc', 'series', flag_value='auprc', default=True, help='Plot area under precision/recall curve (default).')
-@click.option('-x', '--xaxis', 'xaxis', default='iter', type=click.Choice(['iter', 'epoch'], case_sensitive=False), help='X axis (iter or epoch; default: iter).')
+@click.option('-c', '--auprc', 'series', flag_value='auprc', default=True, show_default=True, help='Plot area under precision/recall curve.')
+@click.option('-x', '--xaxis', 'xaxis', default='iter', show_default=True, type=click.Choice(['iter', 'epoch'], case_sensitive=True), help='X axis.')
 @click.option('-o', '--output', 'output_file', default='', type=str, help='File name to save the plot (optional: with no file name, simply display plot on screen without saving it; recommended file formats: .png, .pdf, .svg or any format supported by matplotlib).')
 def cli(file, series, xaxis, output_file):
     """Plot validation metrics from a Topaz training run.
