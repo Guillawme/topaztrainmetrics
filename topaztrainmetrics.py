@@ -23,7 +23,8 @@ def cli(file, series, xaxis, output_file):
         ax.set_xlabel(xaxis)
         ax.set_ylabel(series)
         ax.set_title(f'{series} as a function of {xaxis}')
-    elif series == ['tpr', 'fpr']:
+    else:
+        series = ['tpr', 'fpr']
         fig, axs = plt.subplots(ncols=2, nrows=1, sharex=True, sharey=True, figsize=(10, 5))
         fig.suptitle(f'True and false positive rates as a function of {xaxis}')
         for key, ax in zip(grouped.groups.keys(), axs.flatten()):
